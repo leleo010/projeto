@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mente em Equilíbrio — Site educativo sobre transtorno de ansiedade: o que é, sintomas, causas, diagnóstico, tratamento e mitos e verdades.">
+  <title>Mente em Equilíbrio — Entendendo o transtorno de ansiedade</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Fontes modernas do Google Fonts com fallback seguro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Folha de estilos principal -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Barra discreta de progresso de leitura -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
+  <!-- Cabeçalho fixo com menu em estilo moderno -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <!-- Identidade da marca -->
+      <a href="#inicio" class="brand" aria-label="Mente em Equilíbrio - Voltar ao início">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="13" stroke="currentColor" stroke-opacity="0.45" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <circle cx="16" cy="16" r="7" fill="#1D3552" stroke="#E8EEF4" stroke-width="1.4"/>
+            <circle cx="16" cy="16" r="2.5" fill="#FFFFFF"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong class="brand-name">MENTE EM EQUILÍBRIO</strong>
+          <small class="brand-sub">Entendendo o transtorno de ansiedade.</small>
+        </span>
+      </a>
+
+      <!-- Menu central para desktop -->
+      <nav class="nav-pill" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link is-active">Início</a></li>
+          <li><a href="#o-que-e" class="nav-link">O que é?</a></li>
+          <li><a href="#sintomas" class="nav-link">Sintomas</a></li>
+          <li><a href="#causas" class="nav-link">Causas</a></li>
+          <li><a href="#diagnostico" class="nav-link">Diagnóstico</a></li>
+          <li><a href="#tratamento" class="nav-link">Tratamento</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        </ul>
+      </nav>
+
+      <!-- Ação rápida e botão de menu mobile -->
+      <div class="header-actions">
+        <a href="#mitos-e-verdades" class="header-cta">
+          <span>Mitos e verdades</span>
+          <span class="header-cta-icon" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none">
+              <path d="M3.5 8h9M8.5 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Abrir menu de navegação"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <span class="menu-toggle-line"></span>
+          <span class="menu-toggle-line"></span>
+          <span class="menu-toggle-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu adaptado para celular e tablet -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <nav aria-label="Navegação móvel">
+        <ul class="mobile-nav-list">
+          <li><a href="#inicio" class="mobile-nav-link">Início</a></li>
+          <li><a href="#o-que-e" class="mobile-nav-link">O que é?</a></li>
+          <li><a href="#sintomas" class="mobile-nav-link">Sintomas</a></li>
+          <li><a href="#causas" class="mobile-nav-link">Causas</a></li>
+          <li><a href="#diagnostico" class="mobile-nav-link">Diagnóstico</a></li>
+          <li><a href="#tratamento" class="mobile-nav-link">Tratamento</a></li>
+          <li><a href="#mitos-e-verdades" class="mobile-nav-link">Mitos e verdades</a></li>
+          <li><a href="#sobre" class="mobile-nav-link">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- =====================================================
+         SEÇÃO 1 — INÍCIO
+         ===================================================== -->
+    <section class="section hero" id="inicio">
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="eyebrow-pill">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            <span>01 · Saúde Mental e Informação</span>
+          </div>
+
+          <h1 class="hero-title">
+            Entender a ansiedade é o <em>primeiro passo</em> para cuidar da mente.
+          </h1>
+
+          <p class="hero-description">
+            A ansiedade faz parte da vida, mas quando se torna intensa e frequente pode afetar nossa rotina, nossos relacionamentos e nossa qualidade de vida. Conhecimento e informação são importantes para entender esse transtorno.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#o-que-e" class="btn btn-primary">
+              <span>Conheça o transtorno</span>
+              <span class="btn-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none">
+                  <path d="M3.5 8h9M8.5 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </a>
+
+            <a href="#tratamento" class="btn btn-ghost">
+              <span>Saiba como buscar ajuda</span>
+            </a>
+          </div>
+
+          <div class="hero-highlights">
+            <div class="highlight-item">
+              <span class="highlight-label">Conteúdo</span>
+              <span class="highlight-value">Baseado em fontes de saúde</span>
+            </div>
+            <div class="highlight-divider" aria-hidden="true"></div>
+            <div class="highlight-item">
+              <span class="highlight-label">Linguagem</span>
+              <span class="highlight-value">Acessível e educativa</span>
+            </div>
+            <div class="highlight-divider" aria-hidden="true"></div>
+            <div class="highlight-item">
+              <span class="highlight-label">Propósito</span>
+              <span class="highlight-value">Informar sem estigmas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Elemento visual moderno relacionado à saúde mental -->
+        <div class="hero-visual reveal" data-delay="120">
+          <div class="visual-frame">
+            <span class="hud-corner hud-tl" aria-hidden="true"></span>
+            <span class="hud-corner hud-tr" aria-hidden="true"></span>
+            <span class="hud-corner hud-bl" aria-hidden="true"></span>
+            <span class="hud-corner hud-br" aria-hidden="true"></span>
+
+            <div class="visual-orbit-stage">
+              <img
+                src="assets/images/equilibrio-visual.svg"
+                alt="Ilustração abstrata com círculos concêntricos e ondas suaves simbolizando equilíbrio mental"
+                class="hero-svg-art"
+              >
+
+              <!-- Camadas geométricas flutuantes suaves -->
+              <div class="visual-badge visual-badge-top">
+                <span class="badge-indicator" aria-hidden="true"></span>
+                <span>Equilíbrio &amp; Consciência</span>
+              </div>
+
+              <div class="visual-badge visual-badge-bottom">
+                <span class="badge-mono">RESPIRAÇÃO · APOIO · CUIDADO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#o-que-e" class="scroll-cue" aria-label="Rolar para a próxima seção">
+        <span>Explorar conteúdo</span>
+        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M8 3.5v9M4 8.5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- =====================================================
+         SEÇÃO 2 — O QUE É TRANSTORNO DE ANSIEDADE?
+         ===================================================== -->
+    <section class="section" id="o-que-e">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">02 · O que é?</span>
+          <h2 class="section-title">
+            O que é <em>Transtorno de Ansiedade</em>?
+          </h2>
+          <div class="section-lead-group">
+            <p class="section-lead">
+              A ansiedade é uma reação natural do organismo diante de situações de perigo, pressão ou preocupação.
+            </p>
+            <p class="section-lead">
+              Porém, quando o medo e a preocupação se tornam excessivos, frequentes e difíceis de controlar, causando sofrimento e atrapalhando a vida cotidiana, podem indicar um transtorno de ansiedade.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <article class="card glow-card reveal" data-delay="0">
+            <div class="card-top">
+              <span class="card-index">01 / 03</span>
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M9 12.5l2 2 4-4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </div>
+            <h3 class="card-title">Ansiedade normal</h3>
+            <p class="card-text">
+              É uma resposta passageira e esperada do corpo antes de uma prova, apresentação ou decisão importante. Ajuda a manter o estado de alerta e costuma diminuir quando a situação termina.
+            </p>
+            <span class="card-tag">Reação temporária</span>
+          </article>
+
+          <article class="card glow-card reveal" data-delay="90">
+            <div class="card-top">
+              <span class="card-index">02 / 03</span>
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 4v8l4.5 2.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/>
+                </svg>
+              </span>
+            </div>
+            <h3 class="card-title">Ansiedade excessiva</h3>
+            <p class="card-text">
+              Acontece quando a preocupação fica mais intensa e prolongada do que o necessário para o momento, gerando desgaste emocional, tensão física e dificuldade para relaxar mesmo sem ameaça imediata.
+            </p>
+            <span class="card-tag">Sinal de atenção</span>
+          </article>
+
+          <article class="card glow-card card-accent reveal" data-delay="180">
+            <div class="card-top">
+              <span class="card-index">03 / 03</span>
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3l8 4.5v5c0 4.5-3.4 7.7-8 8.5-4.6-.8-8-4-8-8.5v-5L12 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                  <path d="M12 8.5v4M12 15.5h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </span>
+            </div>
+            <h3 class="card-title">Transtorno de ansiedade</h3>
+            <p class="card-text">
+              É uma condição de saúde em que o medo e a angústia são persistentes, difíceis de controlar e interferem nos estudos, no trabalho, no sono e nos relacionamentos, exigindo avaliação profissional.
+            </p>
+            <span class="card-tag">Requer cuidado profissional</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SEÇÃO 3 — PRINCIPAIS SINTOMAS
+         ===================================================== -->
+    <section class="section section-alt" id="sintomas">
+      <div class="container">
+        <div class="section-header section-header-split reveal">
+          <div>
+            <span class="section-eyebrow">03 · Principais Sintomas</span>
+            <h2 class="section-title">Como a ansiedade se <em>manifesta</em>?</h2>
+          </div>
+          <p class="section-lead">
+            Os sinais podem aparecer no corpo, nas emoções e nas atitudes do dia a dia. Reconhecê-los ajuda a compreender o que está acontecendo.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Sintomas físicos -->
+          <article class="card glow-card symptom-card reveal" data-delay="0">
+            <div class="symptom-header">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M3 12h4l2.5-6 4 12 2.5-6h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <span class="card-index">Categoria 01</span>
+                <h3 class="card-title">Sintomas físicos</h3>
+              </div>
+            </div>
+
+            <ul class="symptom-list">
+              <li>Coração acelerado.</li>
+              <li>Suor excessivo.</li>
+              <li>Tremores.</li>
+              <li>Falta de ar.</li>
+              <li>Tensão muscular.</li>
+              <li>Dificuldade para dormir.</li>
+            </ul>
+          </article>
+
+          <!-- Sintomas emocionais -->
+          <article class="card glow-card symptom-card reveal" data-delay="90">
+            <div class="symptom-header">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 20s-7-4.4-7-10.2C5 6.8 7.3 5 9.8 5c1.5 0 2.2.8 2.2 1.6C12 5.8 12.7 5 14.2 5 16.7 5 19 6.8 19 9.8 19 15.6 12 20 12 20z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <span class="card-index">Categoria 02</span>
+                <h3 class="card-title">Sintomas emocionais</h3>
+              </div>
+            </div>
+
+            <ul class="symptom-list">
+              <li>Medo excessivo.</li>
+              <li>Preocupação constante.</li>
+              <li>Nervosismo.</li>
+              <li>Irritabilidade.</li>
+              <li>Sensação de que algo ruim vai acontecer.</li>
+            </ul>
+          </article>
+
+          <!-- Sintomas comportamentais -->
+          <article class="card glow-card symptom-card reveal" data-delay="180">
+            <div class="symptom-header">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="9" cy="8" r="3.2" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M3.5 19c.6-3.1 2.8-4.8 5.5-4.8s4.9 1.7 5.5 4.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M16 11h5M18.5 8.5v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <span class="card-index">Categoria 03</span>
+                <h3 class="card-title">Sintomas comportamentais</h3>
+              </div>
+            </div>
+
+            <ul class="symptom-list">
+              <li>Evitar situações sociais.</li>
+              <li>Dificuldade de concentração.</li>
+              <li>Isolamento.</li>
+              <li>Inquietação.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SEÇÃO 4 — O QUE CAUSA A ANSIEDADE?
+         ===================================================== -->
+    <section class="section" id="causas">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">04 · Causas</span>
+          <h2 class="section-title">Por que isso <em>acontece</em>?</h2>
+          <p class="section-lead">
+            Não existe uma única causa. Os transtornos de ansiedade podem surgir pela combinação de diferentes fatores ao longo da vida.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <article class="card glow-card reveal" data-delay="0">
+            <div class="card-top">
+              <span class="card-index">Fator 01</span>
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M7 4c3 3 7 5 10 8M17 4c-3 3-7 5-10 8M7 12c3 3 7 5 10 8M17 12c-3 3-7 5-10 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </span>
+            </div>
+            <h3 class="card-title">Genética e histórico familiar</h3>
+            <p class="card-text">
+              Pessoas que possuem familiares com transtornos de ansiedade podem ter maior predisposição a desenvolver o quadro.
+            </p>
+          </article>
+
+          <article class="card glow-card reveal" data-delay="75">
+            <div class="card-top">
+              <span class="card-index">Fator 02</span>
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M13 3L6 13h5l-1 8 8-11h-5l0-7z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </div>
+            <h3 class="card-title">Estresse e experiências traumáticas</h3>
+            <p class="card-text">
+              Situações difíceis, perdas, violência ou períodos prolongados de estresse intenso podem desencadear ou agravar sintomas ansiosos.
+            </p>
+          </article>
+
+          <article class="card glow-card reveal" data-delay="150">
+            <div class="card-top">
+              <span class="card-index">Fator 03</span>
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M3.6 9h16.8M3.6 15h16.8M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18" stroke="currentColor" stroke-width="1.4"/>
+                </svg>
+              </span>
+            </div>
+            <h3 class="card-title">Fatores ambientais e situações difíceis da vida</h3>
+            <p class="card-text">
+              Pressões nos estudos, no trabalho, conflitos familiares, dificuldades financeiras ou mudanças importantes na rotina influenciam o bem-estar emocional.
+            </p>
+          </article>
+
+          <article class="card glow-card reveal" data-delay="225">
+            <div class="card-top">
+              <span class="card-index">Fator 04</span>
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M9.5 4.5a3.5 3.5 0 0 0-3.5 3.5c0 .7.2 1.3.5 1.9A3.5 3.5 0 0 0 5 13c0 1.4.8 2.6 2 3.1a3 3 0 0 0 5 1.9V4.5a2.5 2.5 0 0 0-2.5 0z" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M14.5 4.5A3.5 3.5 0 0 1 18 8c0 .7-.2 1.3-.5 1.9A3.5 3.5 0 0 1 19 13c0 1.4-.8 2.6-2 3.1a3 3 0 0 1-5 1.9V4.5a2.5 2.5 0 0 1 2.5 0z" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </span>
+            </div>
+            <h3 class="card-title">Alterações biológicas e funcionamento do cérebro</h3>
+            <p class="card-text">
+              Substâncias químicas do cérebro (neurotransmissores) e mecanismos ligados à resposta ao medo e ao estresse também participam desse processo.
+            </p>
+          </article>
+        </div>
+
+        <div class="callout-strip reveal" data-delay="120">
+          <span class="callout-dot" aria-hidden="true"></span>
+          <p>
+            Cada pessoa tem uma história única e pode desenvolver ansiedade por motivos diferentes, geralmente pela interação entre fatores biológicos, emocionais e sociais.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SEÇÃO 5 — COMO É FEITO O DIAGNÓSTICO?
+         ===================================================== -->
+    <section class="section section-alt" id="diagnostico">
+      <div class="container">
+        <div class="section-header section-header-split reveal">
+          <div>
+            <span class="section-eyebrow">05 · Diagnóstico</span>
+            <h2 class="section-title">Como identificar um <em>transtorno de ansiedade</em>?</h2>
+          </div>
+          <p class="section-lead">
+            O diagnóstico deve ser feito por um profissional de saúde qualificado, como psicólogo ou médico, conforme suas atribuições profissionais.
+          </p>
+        </div>
+
+        <div class="timeline-grid">
+          <article class="step-card glow-card reveal" data-delay="0">
+            <div class="step-number">01</div>
+            <h3 class="card-title">Conversa e avaliação</h3>
+            <p class="card-text">
+              O profissional conversa com a pessoa sobre seus sentimentos, preocupações e sintomas, ouvindo seu histórico e o contexto em que as dificuldades acontecem.
+            </p>
+          </article>
+
+          <article class="step-card glow-card reveal" data-delay="100">
+            <div class="step-number">02</div>
+            <h3 class="card-title">Análise dos sintomas</h3>
+            <p class="card-text">
+              São avaliados a frequência, a intensidade, a duração e o impacto dos sintomas na rotina escolar, profissional, familiar e social.
+            </p>
+          </article>
+
+          <article class="step-card glow-card reveal" data-delay="200">
+            <div class="step-number">03</div>
+            <h3 class="card-title">Avaliação profissional</h3>
+            <p class="card-text">
+              O profissional verifica se os sintomas correspondem a um transtorno de ansiedade e considera outras possíveis causas físicas ou emocionais.
+            </p>
+          </article>
+        </div>
+
+        <div class="highlight-banner reveal" data-delay="120">
+          <div class="highlight-banner-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/>
+              <path d="M12 10.5v5.5M12 7.5h.01" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p>
+            <strong>Importante:</strong> Sentir ansiedade não significa necessariamente ter um transtorno. O diagnóstico precisa de avaliação profissional.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SEÇÃO 6 — COMO TRATAR E CONTROLAR A ANSIEDADE?
+         ===================================================== -->
+    <section class="section" id="tratamento">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">06 · Tratamento e Cuidado</span>
+          <h2 class="section-title">
+            Existe tratamento. Você não precisa <em>enfrentar isso sozinho</em>.
+          </h2>
+          <p class="section-lead">
+            Com orientação adequada, é possível compreender os gatilhos, aliviar os sintomas e construir estratégias saudáveis para o dia a dia.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card glow-card treatment-card reveal" data-delay="0">
+            <div class="treatment-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7A2.5 2.5 0 0 1 17.5 16H10l-4.5 4v-4H6.5A2.5 2.5 0 0 1 4 13.5v-7z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="treatment-body">
+              <span class="card-index">Abordagem 01</span>
+              <h3 class="card-title">Psicoterapia</h3>
+              <p class="card-text">
+                Acompanhamento psicológico para compreender pensamentos, emoções e desenvolver estratégias práticas para lidar com a ansiedade.
+              </p>
+            </div>
+          </article>
+
+          <article class="card glow-card treatment-card reveal" data-delay="80">
+            <div class="treatment-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="4" y="8" width="16" height="8" rx="4" transform="rotate(-35 12 12)" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M9.7 9.7l4.6 4.6" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </div>
+            <div class="treatment-body">
+              <span class="card-index">Abordagem 02</span>
+              <h3 class="card-title">Medicamentos</h3>
+              <p class="card-text">
+                Em alguns casos, o médico pode indicar medicamentos, sempre com avaliação clínica e acompanhamento profissional contínuo.
+              </p>
+            </div>
+          </article>
+
+          <article class="card glow-card treatment-card reveal" data-delay="160">
+            <div class="treatment-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M18.7 5.3l-1.8 1.8M7.1 16.9l-1.8 1.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="treatment-body">
+              <span class="card-index">Abordagem 03</span>
+              <h3 class="card-title">Hábitos saudáveis</h3>
+              <p class="card-text">
+                Praticar atividades físicas regularmente, manter uma rotina de sono equilibrada e cuidar da alimentação contribuem para o bem-estar físico e mental.
+              </p>
+            </div>
+          </article>
+
+          <article class="card glow-card treatment-card reveal" data-delay="240">
+            <div class="treatment-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="8.5" cy="8.5" r="3" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="16" cy="9.5" r="2.5" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M3.5 19c.5-3 2.4-4.5 5-4.5s4.5 1.5 5 4.5M14 19c.3-2.1 1.6-3.4 3.5-3.4 1.6 0 2.7.9 3 3.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="treatment-body">
+              <span class="card-index">Abordagem 04</span>
+              <h3 class="card-title">Apoio emocional</h3>
+              <p class="card-text">
+                Conversar com pessoas de confiança — como familiares, amigos ou orientadores — e procurar ajuda especializada quando necessário faz toda a diferença.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="callout-strip callout-warning reveal" data-delay="120">
+          <span class="callout-dot" aria-hidden="true"></span>
+          <p>
+            <strong>Observação:</strong> O tratamento varia de pessoa para pessoa. Não se deve utilizar medicamentos sem orientação médica.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SEÇÃO 7 — MITOS E VERDADES
+         ===================================================== -->
+    <section class="section section-alt" id="mitos-e-verdades">
+      <div class="container faq-layout">
+        <div class="faq-intro reveal">
+          <span class="section-eyebrow">07 · Mitos e Verdades</span>
+          <h2 class="section-title">
+            Desconstruindo ideias equivocadas sobre a <em>ansiedade</em>.
+          </h2>
+          <p class="section-lead">
+            Clique em cada pergunta para revelar a resposta e entender o que é mito e o que é verdade.
+          </p>
+        </div>
+
+        <div class="faq-list reveal" data-delay="100">
+          <!-- Pergunta 1 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="resposta-1">
+              <span class="faq-question-text">Ansiedade é frescura?</span>
+              <span class="faq-plus" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" id="resposta-1">
+              <div class="faq-answer-inner">
+                <span class="status-pill status-mito">Mito</span>
+                <p>
+                  Não é frescura nem falta de força de vontade. O transtorno de ansiedade é uma condição de saúde real, reconhecida pela medicina, que envolve fatores emocionais, biológicos e ambientais e merece acolhimento.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pergunta 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="resposta-2">
+              <span class="faq-question-text">Somente adultos podem ter ansiedade?</span>
+              <span class="faq-plus" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" id="resposta-2">
+              <div class="faq-answer-inner">
+                <span class="status-pill status-mito">Mito</span>
+                <p>
+                  A ansiedade pode afetar pessoas de qualquer idade, inclusive crianças, adolescentes e idosos. Em jovens, ela pode aparecer por meio de medos intensos, irritabilidade, queixas físicas ou queda no rendimento escolar.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pergunta 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="resposta-3">
+              <span class="faq-question-text">A ansiedade pode ser tratada?</span>
+              <span class="faq-plus" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" id="resposta-3">
+              <div class="faq-answer-inner">
+                <span class="status-pill status-verdade">Verdade</span>
+                <p>
+                  Sim. Com acompanhamento profissional adequado — como psicoterapia, mudanças de hábitos e, quando indicado por médico, medicação — é possível controlar os sintomas e recuperar o bem-estar.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pergunta 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="resposta-4">
+              <span class="faq-question-text">Quem tem ansiedade consegue levar uma vida normal?</span>
+              <span class="faq-plus" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" id="resposta-4">
+              <div class="faq-answer-inner">
+                <span class="status-pill status-verdade">Verdade</span>
+                <p>
+                  Sim. Com informação, apoio e acompanhamento adequado, pessoas com transtorno de ansiedade conseguem estudar, trabalhar, construir relacionamentos e realizar seus objetivos com qualidade de vida.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pergunta 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="resposta-5">
+              <span class="faq-question-text">É necessário procurar ajuda profissional?</span>
+              <span class="faq-plus" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" id="resposta-5">
+              <div class="faq-answer-inner">
+                <span class="status-pill status-verdade">Verdade</span>
+                <p>
+                  Sim, principalmente quando a ansiedade se torna frequente, intensa ou passa a atrapalhar a rotina. Psicólogos e médicos são os profissionais indicados para avaliar cada caso com segurança.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SEÇÃO 8 — CONCLUSÃO & SEÇÃO 9 — FONTES E REFERÊNCIAS
+         ===================================================== -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <!-- Seção 8: Conclusão -->
+        <div class="conclusion-box glow-card reveal">
+          <div class="conclusion-glow" aria-hidden="true"></div>
+          <span class="section-eyebrow">08 · Conclusão</span>
+          <h2 class="section-title conclusion-title">
+            Cuidar da mente também é <em>cuidar da saúde</em>.
+          </h2>
+          <p class="conclusion-text">
+            O transtorno de ansiedade é uma condição que merece atenção e compreensão. Com informação, apoio e acompanhamento adequado, é possível aprender a lidar com os sintomas e melhorar a qualidade de vida.
+          </p>
+          <blockquote class="courage-quote">
+            "Você não está sozinho. Pedir ajuda é um sinal de coragem."
+          </blockquote>
+        </div>
+
+        <!-- Seção 9: Fontes e Referências -->
+        <div class="references-block reveal" data-delay="120" id="fontes">
+          <div class="references-header">
+            <span class="section-eyebrow">09 · Fontes e Referências</span>
+            <h2 class="references-title">Conteúdo apoiado em instituições de saúde confiáveis</h2>
+          </div>
+
+          <div class="references-grid">
+            <a
+              href="https://linhasdecuidado.saude.gov.br/portal/ansiedade/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="reference-card glow-card"
+            >
+              <div class="reference-meta">
+                <span class="card-index">Fonte 01</span>
+                <span class="external-arrow" aria-hidden="true">↗</span>
+              </div>
+              <h3 class="reference-name">Ministério da Saúde — Transtornos de Ansiedade</h3>
+              <p class="reference-url">linhasdecuidado.saude.gov.br/portal/ansiedade/</p>
+            </a>
+
+            <a
+              href="https://bvsms.saude.gov.br/ansiedade/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="reference-card glow-card"
+            >
+              <div class="reference-meta">
+                <span class="card-index">Fonte 02</span>
+                <span class="external-arrow" aria-hidden="true">↗</span>
+              </div>
+              <h3 class="reference-name">Biblioteca Virtual em Saúde — Ministério da Saúde</h3>
+              <p class="reference-url">bvsms.saude.gov.br/ansiedade/</p>
+            </a>
+
+            <a
+              href="https://www.who.int/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="reference-card glow-card"
+            >
+              <div class="reference-meta">
+                <span class="card-index">Fonte 03</span>
+                <span class="external-arrow" aria-hidden="true">↗</span>
+              </div>
+              <h3 class="reference-name">Organização Mundial da Saúde</h3>
+              <p class="reference-url">who.int</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>MENTE EM EQUILÍBRIO</strong>
+        <span>Entendendo o transtorno de ansiedade.</span>
+      </div>
+      <p class="footer-disclaimer">
+        Projeto educativo desenvolvido para fins escolares. Este site não substitui avaliação, diagnóstico ou tratamento realizado por profissionais de saúde.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante para voltar ao topo -->
+  <button
+    type="button"
+    class="back-to-top"
+    id="backToTop"
+    aria-label="Voltar ao topo da página"
+    title="Voltar ao topo"
+  >
+    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+      <path d="M8 12.5v-9M4 7.5l4-4 4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <!-- Script principal -->
+  <script src="js/script.js"></script>
+</body>
+</html>
